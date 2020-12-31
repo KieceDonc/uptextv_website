@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Loading-Div.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
 </head>
@@ -21,9 +22,11 @@
                     <li class="nav-item"><a class="nav-link" onclick="scrollToElement(&#39;home&#39;); return false;" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" onclick="scrollToElement(&#39;features&#39;); return false;" href="#features">features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#download">DOWNLOAD</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing_table">pricing table</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" onclick="login()" style="cursor: pointer;">Login</a></li>
+                    <li class="nav-item" id="loginNavItem"><a class="nav-link" onclick="login()" style="cursor: pointer;">Login</a></li>
+                    <li class="nav-item" id="dashboardNavItem" style="display: none;"><a class="nav-link" onclick="login()" style="cursor: pointer;">USERNAME</a>
+                        <picture><img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305d54-c7cc-40d1-bb9c-91fbe85943c7-profile_image-300x300.png" style="width: 35px;border-radius: 9000px !important;"></picture>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -74,7 +77,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer" style="margin: 0px;padding: 5px;background: #f6f6f6;">
+    <footer class="footer" style="margin: 0px;padding: 5px;background: transparent;">
         <div class="container">
             <ul class="list-inline mb-2">
                 <li class="list-inline-item"><a href="#">Terms of &nbsp;Use</a></li>
@@ -84,12 +87,13 @@
             <p class="text-muted small mb-4 mb-lg-0">© Brand 2020. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="assets/js/login.js"></script>
 </body>
 

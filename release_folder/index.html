@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>uptextv - home</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Loading-Div.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
 </head>
@@ -21,9 +22,11 @@
                     <li class="nav-item"><a class="nav-link active" onclick="scrollToElement(&#39;home&#39;); return false;" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" onclick="scrollToElement(&#39;features&#39;); return false;" href="#features">features</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#download">DOWNLOAD</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#pricing_table">pricing table</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" onclick="login()" style="cursor: pointer;">Login</a></li>
+                    <li class="nav-item" id="loginNavItem"><a class="nav-link active" onclick="login()" style="cursor: pointer;">Login</a></li>
+                    <li class="nav-item" id="dashboardNavItem" style="display: none;"><a class="nav-link active" onclick="login()" style="cursor: pointer;">USERNAME</a>
+                        <picture><img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305d54-c7cc-40d1-bb9c-91fbe85943c7-profile_image-300x300.png" style="width: 35px;border-radius: 9000px !important;"></picture>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -66,7 +69,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-5 col-lg-4">
                             <div class="clean-pricing-item">
-                                <div class="price"><img src="assets/img/google_chrome_icon.png" style="width: 100px;margin-bottom: 30px;"><button class="btn btn-outline-primary btn-block" type="button">Chrome</button></div>
+                                <div class="price"><img src="assets/img/google_chrome_icon.png" style="width: 100px;margin-bottom: 30px;"><button class="btn btn-outline-primary btn-block" type="button" onclick="openInNewTab(&#39;https://addons.mozilla.org/fr/firefox/addon/uptextv/&#39;)">Chrome</button></div>
                             </div>
                         </div>
                         <div class="col-md-5 col-lg-4">
@@ -83,78 +86,7 @@
                 </div>
             </div>
         </section>
-        <section id="pricing_table" class="clean-block clean-pricing dark">
-            <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">Pricing Table</h2>
-                    <p style="margin-bottom: 30px;">You feel limited by the free version ? <br>We purpose you different paid options&nbsp;&nbsp;</p>
-                    <div class="row justify-content-center">
-                        <div class="col-md-5 col-lg-4"></div>
-                        <div class="col-md-5 col-lg-4">
-                            <div class="clean-pricing-item">
-                                <div class="heading">
-                                    <h3>FREE</h3>
-                                </div>
-                                <div class="features">
-                                    <h4 style="padding: 4px;"><span class="feature">Group limit:&nbsp;</span><span>3</span></h4>
-                                    <h4 style="padding: 4px;"><span class="feature">Streamer per group:&nbsp;</span><span>5</span></h4>
-                                </div>
-                                <div class="price"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-lg-4"></div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 col-lg-4">
-                        <div class="clean-pricing-item">
-                            <div class="heading">
-                                <h3>BASIC</h3>
-                            </div>
-                            <p></p>
-                            <div class="features">
-                                <h4 style="padding: 4px;"><span class="feature">Group limit :&nbsp;</span><span>5</span></h4>
-                                <h4 style="padding: 4px;"><span class="feature">Streamer per group :&nbsp;</span><span>8</span></h4>
-                            </div>
-                            <div class="price">
-                                <h4>3e/month</h4>
-                            </div><button class="btn btn-outline-primary btn-block" type="button">BUY NOW</button>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-lg-4">
-                        <div class="clean-pricing-item">
-                            <div class="heading">
-                                <h3>PRO</h3>
-                            </div>
-                            <p></p>
-                            <div class="features">
-                                <h4 style="padding: 4px;"><span class="feature">Group limit:&nbsp;</span><span>8</span></h4>
-                                <h4 style="padding: 4px;"><span class="feature">Streamer per group:&nbsp;</span><span>12</span></h4>
-                            </div>
-                            <div class="price">
-                                <h4>5e/month</h4><button class="btn btn-outline-primary btn-block" type="button">BUY NOW</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-lg-4">
-                        <div class="clean-pricing-item">
-                            <div class="heading">
-                                <h3>PREMIUM</h3>
-                            </div>
-                            <p></p>
-                            <div class="features">
-                                <h4 style="padding: 4px;"><span class="feature">Group limit:&nbsp;</span><span>none</span></h4>
-                                <h4 style="padding: 4px;"><span class="feature">Streamer per group:&nbsp;</span><span>∞</span></h4>
-                            </div>
-                            <div class="price">
-                                <h4>8e/month</h4><button class="btn btn-outline-primary btn-block" type="button">BUY NOW</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="clean-block clean-form dark" style="background: transparent;">
+        <section id="contact" class="clean-block clean-form dark" style="background: rgb(246,246,246);">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Contact Us</h2>
@@ -170,7 +102,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer" style="margin: 0px;padding: 5px;background: #f6f6f6;">
+    <footer class="footer" style="margin: 0px;padding: 5px;background: transparent;">
         <div class="container">
             <ul class="list-inline mb-2">
                 <li class="list-inline-item"><a href="#">Terms of &nbsp;Use</a></li>
@@ -180,11 +112,13 @@
             <p class="text-muted small mb-4 mb-lg-0">© Brand 2020. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/login.js"></script>
 </body>
