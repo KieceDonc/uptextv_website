@@ -1,5 +1,5 @@
 try{
-    const socket=io("https://uptextv.com:1000",{transport:["websocket "]});
+    const socket=io("https://webapi.uptextv.com",{transport:["websocket "]});
     
     const twitch_code = document.location.href.split("=")[1].split("&")[0];
     
