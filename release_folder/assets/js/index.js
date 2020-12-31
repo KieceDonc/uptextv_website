@@ -1,4 +1,4 @@
- const socket=io("https://uptextv.com:1000",{
+ const socket=io("https://webapi.uptextv.com",{
      transport:["websocket "]
  });
 
