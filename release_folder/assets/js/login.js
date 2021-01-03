@@ -2,17 +2,22 @@
      transport:["websocket "]
  });
 
-getUserData().then((userData)=>{
-    sessionStorage.setItem('userData', userData);
-    
-    let username = userData.displayname
-    let profile_picture_url = userData.profile_picture
-    
-    show_dashboard(username,profile_picture_url)
-}).catch((err)=>{
-    if(err=='no token founded') return;
-    console.log(err)
-})    
+userData = sessionStorage.getItem('userData')
+if(userData!=null){
+    show_dashboard(userData.displayname,userData.profile_picture)
+}else{
+    getUserData().then((userData)=>{
+        sessionStorage.setItem('userData', userData);
+
+        let username = userData.displayname
+        let profile_picture_url = userData.profile_picture
+
+        show_dashboard(username,profile_picture_url)
+    }).catch((err)=>{
+        if(err=='no token founded') return;
+        console.log(err)
+    })
+}    
 
 function getUserData(){
     return new Promise((resolve,reject)=>{

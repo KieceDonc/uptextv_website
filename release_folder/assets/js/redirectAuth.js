@@ -19,5 +19,5 @@ try{
 }
 
 function redirectHome(){
-    location.href="https://master.d2esuklohr8srw.amplifyapp.com"
+    location.href="https://uptextv.com"
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>uptextv - dashboard</title>
+    <title>uptextv - home</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
@@ -15,11 +15,40 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><img class=".nav-brand logo" src="assets/img/logo.png" style="width: 46px;height: 46px;"><a class="navbar-brand logo" href="#" style="margin-left: 10px;">UPTEXTV</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="scrollToElement(&#39;home&#39;); return false;" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="scrollToElement(&#39;features&#39;); return false;" href="#features">features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#download">DOWNLOAD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item" id="loginNavItem"><a class="nav-link" onclick="login()" style="cursor: pointer;">Login</a></li>
+                    <li class="nav-item" id="dashboardNavItem" style="/*display: inline;*/"><a class="nav-link" onclick="login()" style="cursor: pointer;">USERNAME</a>
+                        <picture><img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305d54-c7cc-40d1-bb9c-91fbe85943c7-profile_image-300x300.png" style="width: 35px;border-radius: 9000px !important;"></picture>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page landing-page"></main>
+    <section></section>
+    <footer class="footer" style="margin: 0px;padding: 5px;background: transparent;">
+        <div class="container">
+            <ul class="list-inline mb-2">
+                <li class="list-inline-item"><a href="#">Terms of &nbsp;Use</a></li>
+                <li class="list-inline-item"><span>⋅</span></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">© Brand 2020. All Rights Reserved.</p>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="assets/js/login.js"></script>
